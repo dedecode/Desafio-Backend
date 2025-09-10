@@ -79,7 +79,6 @@ Como Executar
 Siga os passos abaixo para configurar e rodar a aplicação localmente.
 
 1. Preparar o Ambiente
-Bash
 
 # Clone este repositório (caso ainda não tenha feito)
 
@@ -113,19 +112,19 @@ Retorna uma lista paginada de usuários, com suporte a filtros e busca.
 
 Parâmetros de Query:
 
-Parâmetro	Descrição	Padrão	Máximo
-page	Número da página que deseja retornar.	1	-
-page_size	Quantidade de itens por página.	10	50
-q	Termo de busca por nome ou e-mail (case-insensitive).	-	-
-role	Filtra usuários por um papel específico (ex: admin).	-	-
-is_active	Filtra por status (true ou false).	-	-
+Parâmetro	Descrição	
+page:	Número da página que deseja retornar.
+page_size:	Quantidade de itens por página.
+q:	Termo de busca por nome ou e-mail (case-insensitive).
+role:	Filtra usuários por um papel específico (ex: admin).
+is_active:	Filtra por status (true ou false).
 
 # Exemplo de Uso:
 
- Busca usuários administradores que estão ativos
+Busca usuários administradores que estão ativos
 curl "http://localhost:5000/users?role=admin&is_active=true"
 
- Busca por nome "John" na página 2, com 5 itens por página
+Busca por nome "John" na página 2, com 5 itens por página
 curl "http://localhost:5000/users?q=John&page=2&page_size=5"
 GET /users/{id}
 Busca e retorna um usuário específico pelo seu ID.
@@ -135,7 +134,6 @@ Parâmetros de URL:
 Parâmetro	Descrição
 id	O ID único do usuário a ser buscado.
 
-Exportar para as Planilhas
 Respostas Possíveis:
 
 200 OK: Retorna o objeto JSON completo do usuário.
